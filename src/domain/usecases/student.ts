@@ -1,13 +1,11 @@
-import {CreateStudentModel, RemoveStudentModel} from '../models';
+import {StudentModel} from '../models';
 
-export interface ICreateStudent {
+export interface IStudent {
   add: (
-    params: CreateStudentModel.Params,
-  ) => Promise<CreateStudentModel.Response>;
-}
+    params: StudentModel.Params,
+  ) => Promise<StudentModel.Response | undefined>;
 
-export interface IRemoveStudent {
   remove: (
-    params: RemoveStudentModel.Params,
-  ) => Promise<RemoveStudentModel.Response>;
+    params: StudentModel.RemoveStudentParams,
+  ) => Promise<StudentModel.Response | undefined>;
 }

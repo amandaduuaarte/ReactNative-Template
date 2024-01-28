@@ -1,4 +1,4 @@
-export namespace CreateStudentModel {
+export namespace StudentModel {
   export type Params = {
     name: string;
     email: string;
@@ -6,22 +6,16 @@ export namespace CreateStudentModel {
     class: string;
   };
 
-  export type Response = {
-    id: number;
-    token: string;
-    message?: string;
-  };
-}
-
-export namespace RemoveStudentModel {
-  export type Params = {
+  export type RemoveStudentParams = {
     id: number;
     email: string;
   };
 
   export type Response = {
-    id: number;
-    token: string;
-    message?: string;
+    body: {
+      id: number;
+      token: string;
+      message?: string;
+    };
   };
 }
