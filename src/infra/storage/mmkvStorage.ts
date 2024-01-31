@@ -2,7 +2,9 @@ import {MMKV} from 'react-native-mmkv';
 import {IStorage} from '../../data/protocols/storage/storage';
 
 export class MMKVStorage<T> implements IStorage<T> {
-  constructor(private readonly mmkv: MMKV) {
+  private mmkv: MMKV;
+
+  constructor() {
     this.mmkv = new MMKV();
   }
   setItem(key: string, value: T): void {

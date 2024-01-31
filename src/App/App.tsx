@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -24,6 +25,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {saveFactory} from '../main/fatories/graduatedStudent/graduatedStudent-factory';
+import {MMKV} from 'react-native-mmkv';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -31,6 +34,7 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -57,6 +61,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const storage = new MMKV();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -90,6 +95,27 @@ function App(): React.JSX.Element {
             Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
+          <Button
+            title="TESTE STORAGE"
+            onPress={() =>
+              saveFactory(
+                {
+                  id: '1',
+                  data: {
+                    isGraduated: false,
+                    daysForGraduation: 3,
+                  },
+                },
+                'student1',
+              )
+            }
+          />
+          <Button
+            title="TESTE STORAGE Save"
+            onPress={() => {
+              console.log(storage.getString('student1'));
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

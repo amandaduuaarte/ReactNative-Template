@@ -31,7 +31,6 @@ export class GraduatedStudent implements IGraduatedStudent {
   async save(params: GraduatedStudentModel.Response, storageKey: string) {
     // MMKV implementation
     this.Storage.setItem(storageKey, params);
-    console.log(params);
   }
 
   get(storageKey: string) {
