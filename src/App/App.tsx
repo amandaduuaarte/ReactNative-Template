@@ -25,7 +25,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {saveFactory} from '../main/fatories/graduatedStudent/graduatedStudent-factory';
+import {saveFactory} from '../main/factories/graduatedStudent/graduatedStudent-factory';
 import {MMKV} from 'react-native-mmkv';
 
 type SectionProps = PropsWithChildren<{
