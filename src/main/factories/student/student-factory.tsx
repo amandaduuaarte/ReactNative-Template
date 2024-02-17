@@ -1,6 +1,6 @@
-import {Student} from '../../../data/usecases/student';
-import {StudentModel} from '../../../domain/models';
-import {IStudent} from '../../../domain/usecases';
+import {Student} from '@/data/usecases/student';
+import {StudentModel} from '@/domain/models';
+import {IStudent} from '@/domain/usecases';
 
 import {HttpClientAdapter} from '../../adapters';
 

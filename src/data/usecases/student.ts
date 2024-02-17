@@ -1,5 +1,5 @@
-import {StudentModel} from '../../domain/models';
-import {IStudent} from '../../domain/usecases';
+import {StudentModel} from '@/domain/models';
+import {IStudent} from '@/domain/usecases';
 import {IHttpClient} from '../protocols';
 
 export class Student implements IStudent {

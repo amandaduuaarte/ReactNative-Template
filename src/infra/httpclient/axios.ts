@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {IHttpClient, IHttpRequest} from '../../data/protocols';
+import {IHttpClient, IHttpRequest} from '@/data/protocols';
 
 export class AxiosClient implements IHttpClient {
   async request(params: IHttpRequest) {

@@ -1,5 +1,6 @@
-import {GraduatedStudentModel} from '../../domain/models';
-import {IGraduatedStudent} from '../../domain/usecases';
+import {GraduatedStudentModel} from '@/domain/models';
+import {IGraduatedStudent} from '@/domain/usecases';
+
 import {IHttpClient} from '../protocols';
 import {IStorage} from '../protocols/storage/storage';
 

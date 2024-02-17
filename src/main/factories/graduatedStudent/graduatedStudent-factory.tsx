@@ -1,8 +1,8 @@
-import {GraduatedStudent} from '../../../data/usecases/graduateStudent';
-import {GraduatedStudentModel} from '../../../domain/models';
-import {IGraduatedStudent} from '../../../domain/usecases';
+import {GraduatedStudent} from '@/data/usecases/graduateStudent';
+import {GraduatedStudentModel} from '@/domain/models';
+import {IGraduatedStudent} from '@/domain/usecases';
 
-import {HttpClientAdapter, StorageAdapter} from '../../adapters';
+import {HttpClientAdapter, StorageAdapter} from '@/adapters';
 
 export const isGraduatedFactory: Omit<
   IGraduatedStudent['isGraduated'],
