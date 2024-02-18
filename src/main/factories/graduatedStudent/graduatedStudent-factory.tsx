@@ -2,7 +2,7 @@ import {GraduatedStudent} from '@/data/usecases/graduateStudent';
 import {GraduatedStudentModel} from '@/domain/models';
 import {IGraduatedStudent} from '@/domain/usecases';
 
-import {HttpClientAdapter, StorageAdapter} from '@/adapters';
+import * as adapters from '../../adapters';
 
 export const isGraduatedFactory: Omit<
   IGraduatedStudent['isGraduated'],
@@ -11,9 +11,9 @@ export const isGraduatedFactory: Omit<
   params: GraduatedStudentModel.Params,
 ): Promise<GraduatedStudentModel.Response | undefined> => {
   const graduatedStudent = new GraduatedStudent(
-    HttpClientAdapter(),
+    adapters.HttpClientAdapter(),
     '/graduatedStudent',
-    StorageAdapter<GraduatedStudentModel.Response>(),
+    adapters.StorageAdapter<GraduatedStudentModel.Response>(),
   );
   const getStudent = graduatedStudent.isGraduated(params);
   return getStudent;
@@ -24,9 +24,9 @@ export const saveFactory: any = async (
   keyStorage: string,
 ): Promise<void> => {
   const graduatedStudent = new GraduatedStudent(
-    HttpClientAdapter(),
+    adapters.HttpClientAdapter(),
     '/graduatedStudent',
-    StorageAdapter<GraduatedStudentModel.Response>(),
+    adapters.StorageAdapter<GraduatedStudentModel.Response>(),
   );
   graduatedStudent.save(params, keyStorage);
 };

@@ -1,2 +1,2 @@
-export * from './student-model';
 export * from './graduatedStudent-model';
+export * from './student-model';

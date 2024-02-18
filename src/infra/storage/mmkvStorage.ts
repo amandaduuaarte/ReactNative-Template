@@ -1,4 +1,5 @@
 import {MMKV} from 'react-native-mmkv';
+
 import {IStorage} from '@/data/protocols/storage/storage';
 
 export class MMKVStorage<T> implements IStorage<T> {
