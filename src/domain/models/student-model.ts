@@ -11,6 +11,11 @@ export namespace StudentModel {
     email: string;
   };
 
+  export type GetStudent = {
+    id: number;
+    name: string;
+  };
+
   export type Response = {
     body: {
       id: number;

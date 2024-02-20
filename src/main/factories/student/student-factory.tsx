@@ -14,6 +14,14 @@ export const AddStudentFactory: Omit<IStudent['add'], 'remove'> = async (
   return container;
 };
 
+export const GetStudentFactory: Omit<IStudent['get'], 'remove'> = async (
+  params: StudentModel.GetStudent,
+): Promise<StudentModel.Response | undefined> => {
+  const student = new Student(HttpClientAdapter(), BASE_URL);
+  const container = student.get(params);
+  return container;
+};
+
 export const RemoveStudentFactory: Omit<IStudent['remove'], 'add'> = async (
   params: StudentModel.RemoveStudentParams,
 ): Promise<StudentModel.Response | undefined> => {

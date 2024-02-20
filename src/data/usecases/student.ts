@@ -1,5 +1,6 @@
 import {StudentModel} from '@/domain/models';
 import {IStudent} from '@/domain/usecases';
+
 import {IHttpClient} from '../protocols';
 
 export class Student implements IStudent {
@@ -30,6 +31,21 @@ export class Student implements IStudent {
         url: this.url,
         body: params,
       });
+      return response.body;
+    } catch (err: any) {
+      console.error(err.message);
+      return;
+    }
+  }
+
+  async get(params: StudentModel.GetStudent) {
+    try {
+      const response = await this.HttpClient.request({
+        method: 'POST',
+        url: this.url,
+        body: params,
+      });
+
       return response.body;
     } catch (err: any) {
       console.error(err.message);
