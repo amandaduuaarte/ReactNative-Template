@@ -1,11 +1,11 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useContext, useState} from 'react';
 
-import {Student} from '@/data/usecases';
 import {StudentModel} from '@/domain/models';
 import {GetStudentFactory} from '@/main/factories';
 
 interface IProfileData {
   user: StudentModel.Response | undefined;
+  fetchUser: () => void;
 }
 
 type ProfileChildren = {
@@ -18,7 +18,10 @@ const ProfileProvider = ({children}: ProfileChildren) => {
   const [user, setUser] = useState<StudentModel.Response | undefined>();
 
   const fetchUser = async () => {
-    const response = await GetStudentFactory;
+    const response = await GetStudentFactory({
+      id: '123',
+      name: 'teste',
+    });
 
     if (response) {
       setUser(response);
@@ -29,8 +32,20 @@ const ProfileProvider = ({children}: ProfileChildren) => {
     <ProfileContext.Provider
       value={{
         user,
+        fetchUser,
       }}>
       {children}
     </ProfileContext.Provider>
   );
 };
+
+function useProfile(): IProfileData {
+  const context = useContext(ProfileContext);
+
+  if (!context) {
+    throw new Error('useProfile must be used within an ProfileProvider');
+  }
+  return context;
+}
+
+export {ProfileProvider, useProfile};

@@ -14,7 +14,7 @@ export const AddStudentFactory: Omit<IStudent['add'], 'remove'> = async (
   return container;
 };
 
-export const GetStudentFactory: Omit<IStudent['get'], 'remove'> = async (
+export const GetStudentFactory: any = async (
   params: StudentModel.GetStudent,
 ): Promise<StudentModel.Response | undefined> => {
   const student = new Student(HttpClientAdapter(), BASE_URL);
