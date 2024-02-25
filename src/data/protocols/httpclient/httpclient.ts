@@ -1,11 +1,11 @@
+import {THeaders, THttpMethods} from '@/data/interfaces/httpClient';
+
 export interface IHttpRequest {
   url: string;
   method: THttpMethods;
   body?: any;
-  headers?: any;
+  headers?: THeaders;
 }
-
-type THttpMethods = 'GET' | 'POST' | 'DELETE' | 'UPDATE';
 
 export interface IHttpClient<T = any> {
   request: (params: IHttpRequest) => Promise<IHttpResponse<T>>;
