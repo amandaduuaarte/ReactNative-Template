@@ -1,12 +1,10 @@
-import {Button, Text, View} from 'react-native';
+import {Button, Text} from 'react-native';
 
-import {
-  getFactory,
-  saveFactory,
-} from '@/main/factories/graduatedStudent/graduatedStudent-factory';
+import {saveFactory} from '@/main/factories/graduatedStudent/graduatedStudent-factory';
+
+import {Container} from './styles';
 export const Home = (): React.ReactElement => {
   const handleSaveStorage = () => {
-    console.log('auiii');
     saveFactory(
       {
         id: 123,
@@ -17,13 +15,12 @@ export const Home = (): React.ReactElement => {
       },
       'student',
     );
-    console.log('focusous', getFactory('student'));
   };
 
   return (
-    <View>
+    <Container>
       <Text>OI</Text>
       <Button title="save" onPress={handleSaveStorage} />
-    </View>
+    </Container>
   );
 };
