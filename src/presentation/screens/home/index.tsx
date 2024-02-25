@@ -20,7 +20,7 @@ export const Home = (): React.ReactElement => {
   return (
     <Container>
       <Text>OI</Text>
-      <Button title="save" onPress={handleSaveStorage} />
+      <Button title="save" onPress={handleSaveStorage} testID="save_button" />
     </Container>
   );
 };
