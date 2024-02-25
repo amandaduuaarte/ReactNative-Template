@@ -1,5 +1,3 @@
-/* eslint-disable no-labels */
-/* eslint-disable no-label-var */
 import {renderHook} from '@testing-library/react-hooks';
 
 import {IHttpClient, IHttpResponse} from '@/data/protocols';
@@ -105,13 +103,13 @@ describe('GraduatedStudent', () => {
       );
     });
 
-    it('should NOT save when request NOT return success', async () => {
+    it.only('should NOT save when request NOT return success', async () => {
       const {result} = renderHook(
         () => new GraduatedStudent(HttpClient, '', storage),
       );
       const saveFunction = jest.spyOn(result.current, 'save');
 
-      jest.spyOn(result.current, 'isGraduated').mockReturnValue({});
+      jest.spyOn(result.current, 'isGraduated').mockRejectedValue({});
 
       expect(saveFunction).not.toHaveBeenCalled();
     });

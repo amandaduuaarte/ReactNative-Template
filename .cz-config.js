@@ -40,6 +40,8 @@ module.exports = {
       { name: 'android' },
       { name: 'ios' },
       { name: 'domain' },
+      { name: 'data' },
+      { name: 'main' },
       { name: 'tests' },
       { name: 'infra' },
       { name: 'adjusting' },
