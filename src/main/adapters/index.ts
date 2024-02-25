@@ -1,2 +1,2 @@
-export * from './httpClient/axios';
-export * from './storage/MMKV';
+export {HttpClientAdapter} from './httpClient/axios';
+export {StorageAdapter} from './storage/MMKV';

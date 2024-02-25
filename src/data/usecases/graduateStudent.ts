@@ -6,12 +6,16 @@ import {IStorage} from '../protocols/storage/storage';
 
 export class GraduatedStudent implements IGraduatedStudent {
   constructor(
-    private readonly HttpClient: IHttpClient<GraduatedStudentModel.Response>,
+    public readonly HttpClient: IHttpClient<GraduatedStudentModel.Response>,
     private readonly url: string,
     private readonly Storage: IStorage<GraduatedStudentModel.Response>,
   ) {}
 
   async isGraduated(params: GraduatedStudentModel.Params) {
+    if (!params.id || !params.email) {
+      return;
+    }
+
     try {
       const response = await this.HttpClient.request({
         method: 'GET',
@@ -20,22 +24,20 @@ export class GraduatedStudent implements IGraduatedStudent {
       });
 
       if (response.body) {
-        this.save(response.body, 'student');
+        await this.save(response.body, 'student');
       }
       return response.body;
     } catch (err: any) {
-      console.error(err.message);
+      console.error(err?.message);
       return;
     }
   }
 
   async save(params: GraduatedStudentModel.Response, storageKey: string) {
-    // MMKV implementation
-    this.Storage.setItem(storageKey, params);
+    await this.Storage.setItem(storageKey, params);
   }
 
   get(storageKey: string) {
-    // MMKV implementation
     const content = this.Storage.getItem(storageKey);
     return content;
   }
