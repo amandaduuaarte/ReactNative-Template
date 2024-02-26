@@ -1,46 +1,45 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+This project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# React Native Template 
+![ReactNativeStructure](https://github.com/amandaduuaarte/ReactNative-Template/assets/89158507/513e9100-0aea-417e-9787-aa8db51c9c89)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+>**Note**: Esse projeto foi desenvolvido para servir como base para outros projetos usando react-native.
 
-## Step 1: Start the Metro Server
+## Quais libs já estão configuradas: 
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+* Styled-Components
+* Jest
+* React-Navigation
+* React-Query
+* Eslint
+* Prettier
+* Axios
+* React-Native MMKV
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Como rodar a aplicação: 
+No seu terminal
 
+IOS
 ```bash
 # using npm
-npm start
+npm run ios
 
 # OR using Yarn
-yarn start
+yarn run ios
 ```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+Android 
 
 ```bash
 # using npm
 npm run android
 
 # OR using Yarn
-yarn android
+yarn run android
 ```
 
-### For iOS
+## Como é divida a estrutura de pastas: 
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
+Aqui existe um tech guide para que se possa compreender como foi feita a divisão de pastas:
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
