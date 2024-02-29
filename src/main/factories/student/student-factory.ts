@@ -6,26 +6,32 @@ import {HttpClientAdapter} from '../../adapters';
 
 const BASE_URL = '/student';
 
-export const AddStudentFactory: Omit<IStudent['add'], 'remove'> = async (
+async function AddStudentFactory(
   params: StudentModel.Params,
-): Promise<StudentModel.Response | undefined> => {
+): Promise<StudentModel.Response | undefined> {
   const student = new Student(HttpClientAdapter(), BASE_URL);
   const container = student.add(params);
   return container;
-};
+}
 
-export const GetStudentFactory: any = async (
+async function GetStudentFactory(
   params: StudentModel.GetStudent,
-): Promise<StudentModel.Response | undefined> => {
+): Promise<StudentModel.Response | undefined> {
   const student = new Student(HttpClientAdapter(), BASE_URL);
   const container = student.get(params);
   return container;
-};
+}
 
-export const RemoveStudentFactory: Omit<IStudent['remove'], 'add'> = async (
+async function RemoveStudentFactory(
   params: StudentModel.RemoveStudentParams,
-): Promise<StudentModel.Response | undefined> => {
+): Promise<StudentModel.Response | undefined> {
   const student = new Student(HttpClientAdapter(), BASE_URL);
   const container = student.remove(params);
   return container;
+}
+
+export const StudentFactory: IStudent = {
+  add: AddStudentFactory,
+  get: GetStudentFactory,
+  remove: RemoveStudentFactory,
 };

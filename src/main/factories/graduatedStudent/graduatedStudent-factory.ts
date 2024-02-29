@@ -1,11 +1,12 @@
 import {GraduatedStudent} from '@/data/usecases/graduateStudent';
 import {GraduatedStudentModel} from '@/domain/models';
+import {IGraduatedStudent} from '@/domain/usecases';
 
 import {HttpClientAdapter, StorageAdapter} from '../../adapters';
 
-export const isGraduatedFactory = async (
+async function isGraduatedFactory(
   params: GraduatedStudentModel.Params,
-): Promise<GraduatedStudentModel.Response | undefined> => {
+): Promise<GraduatedStudentModel.Response | undefined> {
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
@@ -13,25 +14,31 @@ export const isGraduatedFactory = async (
   );
   const getStudent = graduatedStudent.isGraduated(params);
   return getStudent;
-};
+}
 
-export const saveFactory = (
+async function saveFactory(
   params: GraduatedStudentModel.Response,
   keyStorage: string,
-): void => {
+): Promise<void> {
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
     StorageAdapter<GraduatedStudentModel.Response>(),
   );
   graduatedStudent.save(params, keyStorage);
-};
+}
 
-export const getFactory = (keyStorage: string): any => {
+function getFactory(storageKey: string): GraduatedStudentModel.Response {
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
     StorageAdapter<GraduatedStudentModel.Response>(),
   );
-  return graduatedStudent.get(keyStorage);
+  return graduatedStudent.get(storageKey);
+}
+
+export const GraduatedStudentFactory: IGraduatedStudent = {
+  isGraduated: isGraduatedFactory,
+  save: saveFactory,
+  get: getFactory,
 };
