@@ -1,11 +1,12 @@
+import React from 'react';
 import {Button, Text} from 'react-native';
 
-import {saveFactory} from '@/main/factories/graduatedStudent/graduatedStudent-factory';
+import {GraduatedStudentFactory} from '@/main/factories/graduatedStudent/graduatedStudent-factory';
 
 import {Container} from './styles';
 export const Home = (): React.ReactElement => {
   const handleSaveStorage = () => {
-    saveFactory(
+    GraduatedStudentFactory.save(
       {
         id: 123,
         data: {
