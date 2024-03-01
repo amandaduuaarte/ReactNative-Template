@@ -1,7 +1,7 @@
 import React, {createContext, useContext, useState} from 'react';
 
 import {StudentModel} from '@/domain/models';
-import {GetStudentFactory} from '@/main/factories';
+import {StudentFactory} from '@/main/factories';
 
 interface IProfileData {
   user: StudentModel.Response | undefined;
@@ -18,8 +18,8 @@ const ProfileProvider = ({children}: ProfileChildren) => {
   const [user, setUser] = useState<StudentModel.Response | undefined>();
 
   const fetchUser = async () => {
-    const response = await GetStudentFactory({
-      id: '123',
+    const response = await StudentFactory.get({
+      id: 123,
       name: 'teste',
     });
 
