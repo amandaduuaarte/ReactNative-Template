@@ -1,6 +1,7 @@
-This project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
-# React Native Template 
+<div align="center">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="ReactJS"> 
+<h2 align="center">React Native Template : </h2>
+</div>
 
 ## Quais libs já estão configuradas: 
 
