@@ -2,7 +2,7 @@
 import {IGraduatedStudent} from '@/data/interfaces/useCases';
 
 import {IHttpClient} from '../../data/interfaces';
-import {IStorage} from '../../data/interfaces/storage/storage';
+import {IStorage} from '../../data/interfaces/infra/storage';
 import { TGraduatedStudent } from '@/data/types/useCases';
 
 export class GraduatedStudent implements IGraduatedStudent {

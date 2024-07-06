@@ -1,3 +1,3 @@
-export * from './httpclient/httpclient';
-export * from './storage/storage';
+export * from './infra/httpclient';
+export * from './infra/storage';
 export * from './useCases/index';
