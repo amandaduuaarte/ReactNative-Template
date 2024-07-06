@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {IHttpClient, IHttpResponse} from '@/data/interfaces';
-import {GraduatedStudent} from '@/data/usecases';
+import {GraduatedStudent} from '@/domain/usecases';
 import {GraduatedStudentModel} from '@/domain/models';
 
 const response: IHttpResponse<GraduatedStudentModel.Response> = {
