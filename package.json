@@ -8,28 +8,23 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "prepare": "husky install",
-    "cm": "cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-customizable"
-    }
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "axios": "^1.6.7",
-    "eslint-plugin-simple-import-sort": "^12.0.0",
     "react": "18.2.0",
     "react-native": "0.73.2",
     "react-native-mmkv": "^2.11.0",
     "react-native-safe-area-context": "^4.9.0",
     "react-native-screens": "^3.29.0",
     "react-query": "^3.39.3",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "eslint-plugin-simple-import-sort": "^12.0.0",
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
@@ -47,8 +42,6 @@
     "babel-jest": "^29.6.3",
     "babel-plugin-module-resolver": "^5.0.0",
     "commitizen": "^4.3.0",
-    "commitlint-config-gitmoji": "^2.3.1",
-    "cz-customizable": "^7.0.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.0",
     "jest": "^29.7.0",

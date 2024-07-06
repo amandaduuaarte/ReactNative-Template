@@ -1,10 +1,11 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {IHttpClient, IHttpResponse} from '@/data/protocols';
-import {GraduatedStudent} from '@/data/usecases';
-import {GraduatedStudentModel} from '@/domain/models';
+import {IHttpClient, IHttpResponse} from '@/data/interfaces';
+import {GraduatedStudent} from '@/domain/usecases';
+import { TGraduatedStudent } from '@/data/types';
 
-const response: IHttpResponse<GraduatedStudentModel.Response> = {
+
+const response: IHttpResponse<TGraduatedStudent.Response> = {
   status: 200,
   body: {
     id: 123,
