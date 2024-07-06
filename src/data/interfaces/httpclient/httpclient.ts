@@ -1,4 +1,4 @@
-import {THeaders, THttpMethods} from '@/data/interfaces/httpClient';
+import {THeaders, THttpMethods} from '@/data/types/httpClient';
 
 export interface IHttpRequest {
   url: string;

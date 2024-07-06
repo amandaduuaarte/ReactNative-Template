@@ -1,6 +1,6 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {IHttpClient, IHttpResponse} from '@/data/protocols';
+import {IHttpClient, IHttpResponse} from '@/data/interfaces';
 import {GraduatedStudent} from '@/data/usecases';
 import {GraduatedStudentModel} from '@/domain/models';
 

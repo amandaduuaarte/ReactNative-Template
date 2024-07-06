@@ -1,7 +1,7 @@
 import {StudentModel} from '@/domain/models';
 import {IStudent} from '@/domain/usecases';
 
-import {IHttpClient} from '../protocols';
+import {IHttpClient} from '../interfaces';
 
 export class Student implements IStudent {
   constructor(

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {IHttpClient, IHttpRequest} from '@/data/protocols';
+import {IHttpClient, IHttpRequest} from '@/data/interfaces';
 
 export class AxiosClient implements IHttpClient {
   async request(params: IHttpRequest) {

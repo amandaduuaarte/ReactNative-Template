@@ -1,8 +1,8 @@
 import {GraduatedStudentModel} from '@/domain/models';
 import {IGraduatedStudent} from '@/domain/usecases';
 
-import {IHttpClient} from '../protocols';
-import {IStorage} from '../protocols/storage/storage';
+import {IHttpClient} from '../interfaces';
+import {IStorage} from '../interfaces/storage/storage';
 
 export class GraduatedStudent implements IGraduatedStudent {
   constructor(
