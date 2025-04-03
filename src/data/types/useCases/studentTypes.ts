@@ -1,27 +1,26 @@
 export namespace TStudent {
-    export type Params = {
-      name: string;
-      email: string;
-      age: number;
-      class: string;
-    };
-  
-    export type RemoveStudentParams = {
+  export type Params = {
+    name: string;
+    email: string;
+    age: number;
+    class: string;
+  };
+
+  export type RemoveStudentParams = {
+    id: number;
+    email: string;
+  };
+
+  export type GetStudent = {
+    id: number;
+    name: string;
+  };
+
+  export type Response = {
+    body: {
       id: number;
-      email: string;
+      token: string;
+      message?: string;
     };
-  
-    export type GetStudent = {
-      id: number;
-      name: string;
-    };
-  
-    export type Response = {
-      body: {
-        id: number;
-        token: string;
-        message?: string;
-      };
-    };
-  }
-  
+  };
+}

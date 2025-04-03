@@ -1,5 +1,4 @@
-import { TGraduatedStudent } from "@/data/types/useCases";
-
+import {TGraduatedStudent} from '@/data/types/useCases/graduatedStudentTypes';
 
 export interface IGraduatedStudent {
   isGraduated: (

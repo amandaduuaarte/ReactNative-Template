@@ -1,9 +1,8 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {IHttpClient, IHttpResponse} from '@/data/interfaces';
-import {GraduatedStudent} from '@/domain/usecases';
-import { TGraduatedStudent } from '@/data/types';
-
+import {IHttpClient, IHttpResponse} from '@/data/interfaces/infra/httpclient';
+import {TGraduatedStudent} from '@/data/types/useCases/graduatedStudentTypes';
+import {GraduatedStudent} from '@/domain/usecases/graduateStudent';
 
 const response: IHttpResponse<TGraduatedStudent.Response> = {
   status: 200,

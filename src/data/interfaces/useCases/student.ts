@@ -1,13 +1,9 @@
-import {TStudent } from '@/data/types/useCases'
+import {TStudent} from '@/data/types/useCases/studentTypes';
 
 export interface IStudent {
-  add: (
-    params: TStudent.Params,
-  ) => Promise<TStudent.Response | undefined>;
+  add: (params: TStudent.Params) => Promise<TStudent.Response | undefined>;
 
-  get: (
-    params: TStudent.GetStudent,
-  ) => Promise<TStudent.Response | undefined>;
+  get: (params: TStudent.GetStudent) => Promise<TStudent.Response | undefined>;
 
   remove: (
     params: TStudent.RemoveStudentParams,

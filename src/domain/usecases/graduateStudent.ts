@@ -1,9 +1,8 @@
+import {IHttpClient} from '@/data/interfaces/infra/httpclient';
+import {IGraduatedStudent} from '@/data/interfaces/useCases/graduatedStudent';
+import {TGraduatedStudent} from '@/data/types/useCases/graduatedStudentTypes';
 
-import {IGraduatedStudent} from '@/data/interfaces/useCases';
-
-import {IHttpClient} from '../../data/interfaces';
 import {IStorage} from '../../data/interfaces/infra/storage';
-import { TGraduatedStudent } from '@/data/types/useCases';
 
 export class GraduatedStudent implements IGraduatedStudent {
   constructor(

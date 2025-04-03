@@ -1,5 +1,6 @@
-import {TStudent} from '@/data/types';
 import {create} from 'zustand';
+
+import {TStudent} from '@/data/types/useCases/studentTypes';
 
 type TUser = TStudent.Params;
 
@@ -17,6 +18,5 @@ const initialStates: State = {
 
 export const useProfileStore = create<State & Action>(set => ({
   ...initialStates,
-    setUser: user => set(state => ({...state, ...user}))
+  setUser: user => set(state => ({...state, ...user})),
 }));
-
