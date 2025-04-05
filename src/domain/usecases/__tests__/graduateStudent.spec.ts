@@ -103,7 +103,7 @@ describe('GraduatedStudent', () => {
       );
     });
 
-    it.only('should NOT save when request NOT return success', async () => {
+    it('should NOT save when request NOT return success', async () => {
       const {result} = renderHook(
         () => new GraduatedStudent(HttpClient, '', storage),
       );
