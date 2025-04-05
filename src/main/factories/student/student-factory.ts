@@ -1,5 +1,5 @@
-import { IStudent } from '@/data/interfaces';
-import { TStudent } from '@/data/types';
+import { IStudent } from '@/data/interfaces/useCases/student';
+import { TStudent } from '@/data/types/useCases/studentTypes';
 import { Student } from '@/domain/usecases/student';
 import { HttpClientAdapter } from '@/main/adapters/httpClient/axios';
 

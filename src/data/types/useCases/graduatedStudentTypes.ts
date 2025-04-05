@@ -3,7 +3,7 @@ export namespace TGraduatedStudent {
       id: number;
       email: string;
     };
-  
+
     export type Response = {
       id: number;
       data: {
