@@ -1,8 +1,6 @@
-
-import {IStudent} from '@/data/interfaces/useCases';
-
-import {IHttpClient} from '../../data/interfaces';
-import { TStudent } from '@/data/types/useCases';
+import {IHttpClient} from '@/data/interfaces/infra/httpclient';
+import {IStudent} from '@/data/interfaces/useCases/student';
+import {TStudent} from '@/data/types/useCases/studentTypes';
 
 export class Student implements IStudent {
   constructor(
