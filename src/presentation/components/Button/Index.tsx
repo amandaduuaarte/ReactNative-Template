@@ -1,12 +1,10 @@
 import React from 'react';
-import {Pressable} from 'react-native';
-
-import {Container} from './styles';
+import {Pressable, View} from 'react-native';
 
 export const Button = () => {
   return (
-    <Container>
+    <View>
       <Pressable />
-    </Container>
+    </View>
   );
 };
