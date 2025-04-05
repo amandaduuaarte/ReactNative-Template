@@ -1,9 +1,7 @@
-import {Student} from '@/domain/usecases/student';
-
-import {IStudent} from '@/data/interfaces/useCases';
-
-import {HttpClientAdapter} from '../../adapters';
-import { TStudent } from '@/data/types/useCases';
+import { IStudent } from '@/data/interfaces';
+import { TStudent } from '@/data/types';
+import { Student } from '@/domain/usecases/student';
+import { HttpClientAdapter } from '@/main/adapters/httpClient/axios';
 
 const BASE_URL = '/student';
 

@@ -1,9 +1,8 @@
-import {GraduatedStudent} from '@/domain/usecases/graduateStudent';
-
-import {IGraduatedStudent} from '@/data/interfaces/useCases';
-
-import {HttpClientAdapter, StorageAdapter} from '../../adapters';
-import { TGraduatedStudent } from '@/data/types/useCases';
+import { IGraduatedStudent } from '@/data/interfaces';
+import { TGraduatedStudent } from '@/data/types';
+import { GraduatedStudent } from '@/domain/usecases/graduateStudent';
+import { HttpClientAdapter } from '@/main/adapters/httpClient/axios';
+import { StorageAdapter } from '@/main/adapters/storage/MMKV';
 
 async function isGraduatedFactory(
   params: TGraduatedStudent.Params,
