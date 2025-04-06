@@ -10,7 +10,7 @@ async function isGraduatedFactory(
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
-    StorageAdapter<TGraduatedStudent.Response>(),
+    StorageAdapter(),
   );
   const getStudent = graduatedStudent.isGraduated(params);
   return getStudent;
@@ -23,7 +23,7 @@ async function saveFactory(
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
-    StorageAdapter<TGraduatedStudent.Response>(),
+    StorageAdapter(),
   );
   graduatedStudent.save(params, keyStorage);
 }
@@ -32,7 +32,7 @@ function getFactory(storageKey: string): TGraduatedStudent.Response {
   const graduatedStudent = new GraduatedStudent(
     HttpClientAdapter(),
     '/graduatedStudent',
-    StorageAdapter<TGraduatedStudent.Response>(),
+    StorageAdapter(),
   );
   return graduatedStudent.get(storageKey);
 }
