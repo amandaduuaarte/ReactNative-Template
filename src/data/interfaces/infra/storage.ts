@@ -1,5 +1,7 @@
-export interface IStorage<T> {
-  setItem: (key: string, value: T, path?: string) => void;
+
+
+export interface IStorage {
+  setItem: <T>(key: string, value: T, path?: string) => void;
   deleteItem: (key: string) => void;
-  getItem: (key: string) => T;
+  getItem: (key: string) => unknown ;
 }
