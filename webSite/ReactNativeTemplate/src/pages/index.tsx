@@ -10,7 +10,6 @@ import { Contribute } from "../components/Contribute";
 import { TechStack } from "../components/TechStack";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
@@ -43,10 +42,7 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout>
       <HomepageHeader />
 
       <main>

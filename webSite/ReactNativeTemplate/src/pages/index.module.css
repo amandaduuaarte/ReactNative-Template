@@ -16,18 +16,7 @@
   flex: 1;
   min-width: 300px;
   row-gap: 24px;
-}
-.textContainer h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.textContainer p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: #555;
+  order: 1;
 }
 
 .imageContainer {
@@ -35,13 +24,28 @@
   display: flex;
   justify-content: center;
   width: 650px;
-    height: 480px;
+  height: 480px;
+  order: 2;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  
-  .koala {
-    width: 600px;
+
+  .imageContainer {
+    width: 100%;
     height: auto;
-    border-radius: 50%;
-    background-color: #d9ede6;
-    padding: 2rem;
+    margin-top: 2rem;
+    order: 1;
+    .koala {
+      display: none;
+      }
+      
+      .textContainer {
+        padding: 0 1rem;
+        order: 2;
+      }
+      }
 }

@@ -89,3 +89,18 @@
     margin-right: 0.5rem;
   }
   
+  @media (max-width: 768px) {
+ 
+    .contributeBox{
+      order: 1;
+    }
+    .membersBox{
+     order: 3;
+    }
+    .startSection{
+      order: 2;
+    }
+    .codeBox{
+      order: 4;
+    }
+  }
