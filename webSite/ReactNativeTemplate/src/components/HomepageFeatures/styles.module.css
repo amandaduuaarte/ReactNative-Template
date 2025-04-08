@@ -6,6 +6,16 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 72px;
+    width: 72px;
+  }
+.cardFeature {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease-in-out;
+  height: 350px;
 }

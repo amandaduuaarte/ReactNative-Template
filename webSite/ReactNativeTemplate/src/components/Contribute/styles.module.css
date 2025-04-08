@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  
+  .leftSection {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .rightSection {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .codeBox {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 5px 5px 0 #b2d3c2;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
+  .code {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    width: 85%;
+  }
+  
+  .copyButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e3f0e8;
+    border-radius: 12px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;  
+  }
+  
+  .codeDescription {
+    color: #f4a300;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .membersBox {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 #b2d3c2;
+  }
+  
+  .memberList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  
+  .memberList li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .memberList li span {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  .startSection {
+    margin-top: 1rem;
+  }
+  
+  .bolt {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  

@@ -1,0 +1,88 @@
+.container {
+    padding: 2rem;
+    font-family: sans-serif;
+    background-color: #fefefe;
+  }
+  
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  
+  .features {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1rem;
+    line-height: 1.8;
+    align-self:  center;
+  }
+  
+  .phoneMockup {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .phoneMockup img {
+    max-width: 150px;
+    margin: 1rem auto;
+  }
+  
+  .phoneMockup p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .bottomContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .koala {
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .koala img {
+    width: 240px;
+  }
+  
+  .koala p {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .contribute {
+    flex: 1;
+    min-width: 300px;
+    
+  }
+  
+  .contribute h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contribute ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .contribute li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contribute code {
+    background-color: #f4f4f4;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  
