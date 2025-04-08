@@ -2,46 +2,33 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introdução
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+Boilerplate React Native com Clean Architecture
 
-Get started by **creating a new site**.
+![Koala pixel art](/img/logo-koala.svg)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Construa apps escaláveis com uma estrutura sólida desde o primeiro commit. Este boilerplate foi pensado para desenvolvedores que buscam organização, legibilidade e facilidade para evoluir projetos em React Native.
 
-### What you'll need
+## Iniciando
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+Para criar um projeto React Native usando esse template é bem simples
 
 ```bash
 npm init docusaurus@latest my-website classic
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## Features do projeto
 
-The command also installs all necessary dependencies you need to run Docusaurus.
 
-## Start your site
+| **Features**               | **Description** |
+|---------------------------|-----------------|
+| `TypeScript` | Todo o projeto foi construido usando TypeScript o que ajudou na tipagem das features |
+| `React Navigation`               | Usando o [React Navigation](https://reactnavigation.org/), foi possivel estruturar as rotas da aplicação deixando de uma forma simples e clara a criação de novas telas e as navegações dentro do seu app. |
+| `Axios`  e `React Query`          | Com a implementação do [Axios](https://tanstack.com/query) é possível realizar as requisições sem grandes difuculdades e com a utilização do [TanStackQuery](https://tanstack.com/query), é simples e prático lidar com data fetching na aplicação. |
+| `Synchrone storage`   | Com [React Native MMKV](https://github.com/mrousavy/react-native-mmkv), é possivel lidar e armazenar os dados necessários no storage de forma simples e performatica. |
 
-Run the development server:
 
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+> 💡 **DON'T FORGET !!**  
+> Se você achou a ideia interessante da uma estrela lá no Git ✨
