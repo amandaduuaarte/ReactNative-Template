@@ -8,7 +8,7 @@ export class GraduatedStudent implements IGraduatedStudent {
   constructor(
     public readonly HttpClient: IHttpClient<TGraduatedStudent.Response>,
     private readonly url: string,
-    private readonly Storage: IStorage<TGraduatedStudent.Response>,
+    private readonly Storage: IStorage,
   ) {}
 
   async isGraduated(params: TGraduatedStudent.Params) {
@@ -37,8 +37,8 @@ export class GraduatedStudent implements IGraduatedStudent {
     await this.Storage.setItem(storageKey, params);
   }
 
-  get(storageKey: string) {
+  get(storageKey: string): TGraduatedStudent.Response  {
     const content = this.Storage.getItem(storageKey);
-    return content;
+      return content;
   }
 }

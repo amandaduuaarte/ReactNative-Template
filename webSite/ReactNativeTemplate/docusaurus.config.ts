@@ -81,19 +81,6 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'featuresSidebar',
-          position: 'right',
-          to: "/HomepageFeatures",
-          label: 'Features',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'contributeSidebar',
-          position: 'right',
-          label: 'Contribute',
-        },
-        {
           href: 'https://github.com/amandaduuaarte/ReactNative-Template',
           label: 'GitHub',
           position: 'right',
