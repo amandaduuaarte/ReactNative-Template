@@ -1,20 +1,41 @@
-# Dependencies
-/node_modules
-
-# Production
-/build
-
-# Generated files
-.docusaurus
-.cache-loader
-
-# Misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# Node
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+
+# Build
+dist/
+build/
+tmp/
+temp/
+.cache/
+expo-shared/
+
+# Metro / React Native
+.expo/
+.expo-shared/
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/build/
+*.keystore
+*.p8
+*.jks
+
+# Docusaurus
+.docusaurus/
+build/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.lock
+.idea/
+.vscode/
