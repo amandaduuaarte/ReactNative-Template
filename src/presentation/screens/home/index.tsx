@@ -27,7 +27,7 @@ export const Home = (): React.ReactElement => {
 
       <TouchableOpacity
         onPress={handleOpenDocs}
-        testID="save_button"
+        testID="openDocs"
         style={styles.button}>
         <Text style={styles.buttonText}>Docs</Text>
       </TouchableOpacity>
