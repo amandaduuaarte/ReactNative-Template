@@ -2,6 +2,10 @@
 
 Este projeto é um template para aplicações React Native estruturado seguindo os princípios da Clean Architecture. Ele não é separado por módulos ou features, mas sim por camadas, com responsabilidades bem definidas e independentes entre si.
 
+![mockMobile](https://github.com/user-attachments/assets/b299437e-309a-4ed5-95e4-f5415a66166c)
+
+
+
 ## 🧠 Filosofia
 
 Sempre que for necessário desacoplar alguma camada, deve ser criada uma abstração.
